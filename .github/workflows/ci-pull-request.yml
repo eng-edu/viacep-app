@@ -25,3 +25,6 @@ jobs:
 
       - name: Run tests and static analysis
         run: ./gradlew ktlintCheck detekt
+
+      - name: Build and test Android app
+        run: ./gradlew clean build test
