@@ -29,8 +29,8 @@ jobs:
       - name: Upload lint report
         uses: actions/upload-artifact@v2
         with:
-          name: lint-report
-          path: app/build/reports/lint
+          name: lint-report.html
+          path: app/build/reports/lint-results-debug.html
 
       - name: Build and test Android app
         run: ./gradlew clean build test
