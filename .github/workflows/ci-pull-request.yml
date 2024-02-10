@@ -23,8 +23,14 @@ jobs:
       - name: Permission gradlew
         run: chmod +x gradlew
 
-      - name: Run tests and static analysis
-        run: ./gradlew ktlintCheck detekt
+      - name: Run lint
+        run: ./gradlew lint
+
+      - name: Upload lint report
+        uses: actions/upload-artifact@v2
+        with:
+          name: lint-report
+          path: app/build/reports/lint
 
       - name: Build and test Android app
         run: ./gradlew clean build test
