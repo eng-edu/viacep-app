@@ -87,7 +87,7 @@ dependencies {
     // Para coroutines com Retrofit
     implementation("com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2")
 
-    //testes
+    // testes
     androidTestImplementation("io.mockk:mockk-android:1.12.0")
     androidTestImplementation("io.mockk:mockk-common:1.12.0")
 
@@ -98,6 +98,3 @@ dependencies {
     // Dependência do Detekt
     implementation("io.gitlab.arturbosch.detekt:detekt-cli:1.23.3")
 }
-
-
-
