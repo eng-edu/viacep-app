@@ -91,12 +91,11 @@ dependencies {
     androidTestImplementation("io.mockk:mockk-android:1.12.0")
     androidTestImplementation("io.mockk:mockk-common:1.12.0")
 
-    //injeção de dependencia
-    implementation("io.insert-koin:koin-android:3.2.0")
-    implementation("io.insert-koin:koin-androidx-viewmodel:3.2.0")
+//    //injeção de dependencia
+//    implementation("io.insert-koin:koin-android:3.2.0")
+//    implementation("io.insert-koin:koin-androidx-viewmodel:3.2.0")
 
     // Dependência do Detekt
-    implementation("io.gitlab.arturbosch.detekt:detekt-formatting:1.23.3")
     implementation("io.gitlab.arturbosch.detekt:detekt-cli:1.23.3")
 }
 
