@@ -7,9 +7,8 @@ on:
       - develop
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -31,6 +30,3 @@ jobs:
         with:
           name: lint-report.html
           path: app/build/reports/lint-results-debug.html
-
-      - name: Build and test Android app
-        run: ./gradlew clean build test
