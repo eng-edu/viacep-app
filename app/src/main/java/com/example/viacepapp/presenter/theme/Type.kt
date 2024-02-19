@@ -1,4 +1,4 @@
-package com.example.viacepapp.ui.theme
+package com.example.viacepapp.presenter.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

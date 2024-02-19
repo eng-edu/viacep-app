@@ -1,10 +1,6 @@
-import io.gitlab.arturbosch.detekt.Detekt
-
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("io.gitlab.arturbosch.detekt") version ("1.23.3")
-    id("org.jlleitschuh.gradle.ktlint") version "11.1.0"
 }
 
 android {
@@ -51,15 +47,6 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
-
-    tasks.withType<Detekt>().configureEach {
-        reports {
-            html.required.set(true)
-            txt.required.set(true)
-            sarif.required.set(true)
-            md.required.set(true)
-        }
-    }
 }
 
 dependencies {
@@ -94,7 +81,4 @@ dependencies {
 //    //injeção de dependencia
 //    implementation("io.insert-koin:koin-android:3.2.0")
 //    implementation("io.insert-koin:koin-androidx-viewmodel:3.2.0")
-
-    // Dependência do Detekt
-    implementation("io.gitlab.arturbosch.detekt:detekt-cli:1.23.3")
 }
