@@ -12,7 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.lifecycleScope
-import com.example.viacepapp.domain.util.ViewState
+import com.example.viacepapp.presenter.util.ViewState
 import com.example.viacepapp.presenter.theme.ViaCepAppTheme
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.getViewModel

@@ -8,7 +8,7 @@ import com.example.viacepapp.data.repository.AddressRepositoryImpl
 import com.example.viacepapp.domain.model.AddressVO
 import com.example.viacepapp.domain.useCase.GetAddressUseCase
 import com.example.viacepapp.domain.useCase.GetAddressUseCaseImpl
-import com.example.viacepapp.domain.util.ViewState
+import com.example.viacepapp.presenter.util.ViewState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

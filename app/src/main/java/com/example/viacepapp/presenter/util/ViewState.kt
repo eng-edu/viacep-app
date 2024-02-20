@@ -1,4 +1,4 @@
-package com.example.viacepapp.domain.util
+package com.example.viacepapp.presenter.util
 
 sealed class ViewState<out T> {
     object Loading : ViewState<Nothing>()
