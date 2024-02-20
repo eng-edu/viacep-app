@@ -78,7 +78,6 @@ dependencies {
     androidTestImplementation("io.mockk:mockk-android:1.12.0")
     androidTestImplementation("io.mockk:mockk-common:1.12.0")
 
-//    //injeção de dependencia
-//    implementation("io.insert-koin:koin-android:3.2.0")
-//    implementation("io.insert-koin:koin-androidx-viewmodel:3.2.0")
+    //injeção de dependencia
+    implementation("io.insert-koin:koin-androidx-compose:3.2.0")
 }

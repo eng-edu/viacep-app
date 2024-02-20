@@ -1,12 +1,13 @@
 package com.example.viacepapp.domain.useCase
 
+import com.example.viacepapp.data.repository.AddressRepository
 import com.example.viacepapp.data.repository.AddressRepositoryImpl
 import com.example.viacepapp.domain.model.AddressVO
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.single
 import kotlinx.coroutines.withContext
 
-class GetAddressUseCaseImpl(private val repository: AddressRepositoryImpl) : GetAddressUseCase {
+class GetAddressUseCaseImpl(private val repository: AddressRepository) : GetAddressUseCase {
     override
     suspend fun execute(cep: String): AddressVO {
         val addressVO: AddressVO
