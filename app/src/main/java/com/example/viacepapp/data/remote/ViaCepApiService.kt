@@ -5,6 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface ViaCepApiService {
-    @GET("/sws/{cep}/json/")
+    @GET("/ws/{cep}/json/")
     suspend fun getAddress(@Path("cep") cep: String): ViaCepDTO
 }

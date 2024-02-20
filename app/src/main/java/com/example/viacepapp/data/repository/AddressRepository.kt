@@ -7,8 +7,8 @@ import com.example.viacepapp.data.model.WidnetDTO
 import kotlinx.coroutines.flow.Flow
 
 interface AddressRepository {
-    fun getAddressViaCep(cep: String): Flow<ViaCepDTO>
-    fun getAddressPostmon(cep: String): Flow<PostmonDTO>
-    fun getAddressOpenCep(cep: String): Flow<OpenCepDTO>
-    fun getAddressWidnet(cep: String): Flow<WidnetDTO>
+    suspend fun getAddressViaCep(cep: String): ViaCepDTO
+    suspend fun getAddressPostmon(cep: String): PostmonDTO
+    suspend fun getAddressOpenCep(cep: String): OpenCepDTO
+    suspend fun getAddressWidnet(cep: String): WidnetDTO
 }

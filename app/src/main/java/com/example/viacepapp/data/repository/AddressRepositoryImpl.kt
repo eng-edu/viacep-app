@@ -22,20 +22,9 @@ class AddressRepositoryImpl(
     private val widnetApiService: WidnetApiService
 
 ) : AddressRepository {
+    override suspend fun getAddressViaCep(cep: String) = viaCepApiService.getAddress(cep)
+    override suspend fun getAddressPostmon(cep: String) = postmonApiService.getAddress(cep)
+    override suspend fun getAddressOpenCep(cep: String) = openCepApiService.getAddress(cep)
+    override suspend fun getAddressWidnet(cep: String) = widnetApiService.getAddress(cep)
 
-    override fun getAddressViaCep(cep: String) = flow {
-        emit(viaCepApiService.getAddress(cep))
-    }
-
-    override fun getAddressPostmon(cep: String) = flow {
-        emit(postmonApiService.getAddress(cep))
-    }
-
-    override fun getAddressOpenCep(cep: String) = flow {
-        emit(openCepApiService.getAddress(cep))
-    }
-
-    override fun getAddressWidnet(cep: String) = flow {
-        emit(widnetApiService.getAddress(cep))
-    }
 }
