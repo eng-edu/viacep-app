@@ -6,5 +6,5 @@ data class PostmonDTO(
     @SerializedName("logradouro") val logradouro: String,
     @SerializedName("bairro") val bairro: String,
     @SerializedName("cidade") val cidade: String,
-    @SerializedName("estado_info") val estadoInfo: EstadoInfo
+    @SerializedName("estado_info") val estadoInfo: EstadoInfoDTO
 )

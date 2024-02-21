@@ -21,10 +21,12 @@ class AddressViewModel(private val getAddressUseCase: GetAddressUseCase) : ViewM
         viewModelScope.launch {
             try {
                 _addressState.value = ViewState.Loading
-                val address = getAddressUseCase.execute(cep)
-                _addressState.value = ViewState.Success(address)
+                getAddressUseCase.execute(cep)?.let {
+                    _addressState.value = ViewState.Success(it)
+                }
+
             } catch (e: Exception) {
-                _addressState.value = ViewState.Error(e.message.toString(), ::tryAgain)
+                _addressState.value = ViewState.Error("Parece que ninguém cruzou a linha de chagada =(", ::tryAgain)
             }
         }
     }
