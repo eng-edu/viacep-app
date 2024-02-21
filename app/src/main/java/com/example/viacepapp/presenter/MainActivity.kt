@@ -26,6 +26,7 @@ import com.example.viacepapp.domain.model.AddressVO
 import com.example.viacepapp.presenter.componentes.AppTitle
 import com.example.viacepapp.presenter.componentes.CepButton
 import com.example.viacepapp.presenter.componentes.CepTextField
+import com.example.viacepapp.presenter.componentes.RunnersList
 import com.example.viacepapp.presenter.componentes.WinnerText
 import com.example.viacepapp.presenter.util.ViewState
 import com.example.viacepapp.presenter.theme.ViaCepAppTheme
@@ -65,6 +66,8 @@ class MainActivity : ComponentActivity() {
             verticalArrangement = Arrangement.Center
         ) {
             AppTitle()
+
+            RunnersList()
 
             CepTextField(cep = cep, onCepChange = { newCep -> cep = newCep })
 
