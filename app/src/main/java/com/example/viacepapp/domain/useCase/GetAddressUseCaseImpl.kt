@@ -6,7 +6,6 @@ import com.example.viacepapp.domain.model.Response
 import com.example.viacepapp.domain.model.toVo
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.filter
-import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flatMapMerge
 import kotlinx.coroutines.flow.flow
@@ -25,7 +24,7 @@ class GetAddressUseCaseImpl(private val repository: AddressRepository) : GetAddr
             try {
                 emit(Response(success = true, addressVO = repository.getAddressViaCep(cep).toVo()))
             } catch (e: Exception) {
-                emit(Response(success = false, errorMsg = e.message.toString()))
+                emit(Response(errorMsg = e.message.toString()))
             }
         }
 
@@ -33,7 +32,7 @@ class GetAddressUseCaseImpl(private val repository: AddressRepository) : GetAddr
             try {
                 emit(Response(success = true, addressVO = repository.getAddressOpenCep(cep).toVo()))
             } catch (e: Exception) {
-                emit(Response(success = false, errorMsg = e.message.toString()))
+                emit(Response(errorMsg = e.message.toString()))
             }
         }
 
@@ -41,7 +40,7 @@ class GetAddressUseCaseImpl(private val repository: AddressRepository) : GetAddr
             try {
                 emit(Response(success = true, addressVO = repository.getAddressPostmon(cep).toVo()))
             } catch (e: Exception) {
-                emit(Response(success = false, errorMsg = e.message.toString()))
+                emit(Response(errorMsg = e.message.toString()))
             }
         }
 
@@ -49,7 +48,7 @@ class GetAddressUseCaseImpl(private val repository: AddressRepository) : GetAddr
             try {
                 emit(Response(success = true, addressVO = repository.getAddressWidnet(cep).toVo()))
             } catch (e: Exception) {
-                emit(Response(success = false, errorMsg = e.message.toString()))
+                emit(Response(errorMsg = e.message.toString()))
             }
         }
 
