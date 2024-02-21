@@ -22,6 +22,14 @@ class GetAddressUseCaseImpl(private val repository: AddressRepository) : GetAddr
         val postmonFlow = flow { emit(repository.getAddressPostmon(cep).toVo()) }
         val widnetFlow = flow { emit(repository.getAddressWidnet(cep).toVo()) }
 
+        /**
+         * flatMapMerge é um operador do Kotlin Flow que permite combinar vários fluxos em um único fluxo,
+         * onde os elementos dos fluxos originais são emitidos em ordem, mas as emissões ocorrem concorrentemente.
+         *
+         * Quando você aplica flatMapMerge a um fluxo de entrada, ele aceita um lambda que mapeia cada elemento do
+         * fluxo para um novo fluxo. Em seguida, mescla todos esses fluxos resultantes em um único fluxo, emitindo
+         * os elementos à medida que estão prontos, independentemente da ordem de chegada dos elementos originais.
+         */
         val combinedFlow = flowOf(viaCepFlow, openCepFlow, postmonFlow, widnetFlow)
             .flatMapMerge { it }
 
