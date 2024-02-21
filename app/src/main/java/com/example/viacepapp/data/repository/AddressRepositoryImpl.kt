@@ -12,6 +12,7 @@ import com.example.viacepapp.domain.model.AddressVO
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
@@ -22,9 +23,24 @@ class AddressRepositoryImpl(
     private val widnetApiService: WidnetApiService
 
 ) : AddressRepository {
-    override suspend fun getAddressViaCep(cep: String) = viaCepApiService.getAddress(cep)
-    override suspend fun getAddressPostmon(cep: String) = postmonApiService.getAddress(cep)
-    override suspend fun getAddressOpenCep(cep: String) = openCepApiService.getAddress(cep)
-    override suspend fun getAddressWidnet(cep: String) = widnetApiService.getAddress(cep)
+    override suspend fun getAddressViaCep(cep: String) = coroutineScope {
+        delay(4000L)
+        viaCepApiService.getAddress(cep)
+    }
+
+    override suspend fun getAddressPostmon(cep: String) = coroutineScope {
+        delay(3000L)
+        postmonApiService.getAddress(cep)
+    }
+
+    override suspend fun getAddressOpenCep(cep: String) = coroutineScope {
+        delay(2000L)
+        openCepApiService.getAddress(cep)
+    }
+
+    override suspend fun getAddressWidnet(cep: String) = coroutineScope {
+        delay(5000L)
+        widnetApiService.getAddress(cep)
+    }
 
 }
