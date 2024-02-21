@@ -24,22 +24,18 @@ class AddressRepositoryImpl(
 
 ) : AddressRepository {
     override suspend fun getAddressViaCep(cep: String) = coroutineScope {
-        delay(4000L)
         viaCepApiService.getAddress(cep)
     }
 
     override suspend fun getAddressPostmon(cep: String) = coroutineScope {
-        delay(3000L)
         postmonApiService.getAddress(cep)
     }
 
     override suspend fun getAddressOpenCep(cep: String) = coroutineScope {
-        delay(2000L)
         openCepApiService.getAddress(cep)
     }
 
     override suspend fun getAddressWidnet(cep: String) = coroutineScope {
-        delay(5000L)
         widnetApiService.getAddress(cep)
     }
 

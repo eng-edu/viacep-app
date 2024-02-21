@@ -1,6 +1,5 @@
 package com.example.viacepapp.di
 
-import com.example.viacepapp.data.model.WidnetDTO
 import com.example.viacepapp.data.remote.OpenCepApiService
 import com.example.viacepapp.data.remote.PostmonApiService
 import com.example.viacepapp.data.remote.ViaCepApiService
