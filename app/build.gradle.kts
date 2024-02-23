@@ -67,17 +67,5 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    // Retrofit para chamadas de API
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-
-    // Para coroutines com Retrofit
-    implementation("com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2")
-
-    // testes
-    androidTestImplementation("io.mockk:mockk-android:1.12.0")
-    androidTestImplementation("io.mockk:mockk-common:1.12.0")
-
-    //injeção de dependencia
-    implementation("io.insert-koin:koin-androidx-compose:3.2.0")
+    implementation(project(":ceprace"))
 }

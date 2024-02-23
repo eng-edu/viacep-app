@@ -17,4 +17,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "ViaCepApp"
 include(":app")
- 
+include(":ceprace")
+include(":ceprace:lib")

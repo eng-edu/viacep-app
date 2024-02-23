@@ -22,7 +22,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.viacepapp.domain.model.AddressVO
+import com.engedu.ceprace.domain.model.AddressVO
 import com.example.viacepapp.presenter.componentes.AppTitle
 import com.example.viacepapp.presenter.componentes.CepButton
 import com.example.viacepapp.presenter.componentes.CepTextField
@@ -30,29 +30,28 @@ import com.example.viacepapp.presenter.componentes.RunnersList
 import com.example.viacepapp.presenter.componentes.WinnerText
 import com.example.viacepapp.presenter.util.ViewState
 import com.example.viacepapp.presenter.theme.ViaCepAppTheme
-import org.koin.androidx.viewmodel.ext.android.getViewModel
-
 
 class MainActivity : ComponentActivity() {
 
+    private val viewModel: MainViewModel = MainViewModel()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             ViaCepAppTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MainView()
+                    MainView(viewModel)
                 }
             }
         }
     }
 
     @Composable
-    fun MainView(
-        viewModel: AddressViewModel = getViewModel()
-    ) {
+    fun MainView(viewModel: MainViewModel) {
+
         // Estado do campo de texto para o CEP
         var cep by remember { mutableStateOf("") }
 
