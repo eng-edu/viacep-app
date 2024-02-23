@@ -1,4 +1,4 @@
-package com.example.viacepapp.presenter.componentes
+package com.example.viacepapp.componentes
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Button

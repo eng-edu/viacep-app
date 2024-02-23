@@ -1,4 +1,4 @@
-package com.example.viacepapp.presenter.util
+package com.example.viacepapp.util
 
 sealed class ViewState<out T> {
     object Idle : ViewState<Nothing>()

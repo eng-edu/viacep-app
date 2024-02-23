@@ -1,4 +1,4 @@
-package com.example.viacepapp.presenter.theme
+package com.example.viacepapp.theme
 
 import android.app.Activity
 import android.os.Build

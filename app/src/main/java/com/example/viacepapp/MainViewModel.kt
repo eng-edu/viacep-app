@@ -1,10 +1,10 @@
-package com.example.viacepapp.presenter
+package com.example.viacepapp
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.engedu.ceprace.initializer.CepRaceInit
 import com.engedu.ceprace.domain.model.AddressVO
-import com.example.viacepapp.presenter.util.ViewState
+import com.example.viacepapp.util.ViewState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

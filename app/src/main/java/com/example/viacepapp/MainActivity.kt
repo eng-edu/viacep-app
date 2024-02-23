@@ -1,4 +1,4 @@
-package com.example.viacepapp.presenter
+package com.example.viacepapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -23,13 +23,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.engedu.ceprace.domain.model.AddressVO
-import com.example.viacepapp.presenter.componentes.AppTitle
-import com.example.viacepapp.presenter.componentes.CepButton
-import com.example.viacepapp.presenter.componentes.CepTextField
-import com.example.viacepapp.presenter.componentes.RunnersList
-import com.example.viacepapp.presenter.componentes.WinnerText
-import com.example.viacepapp.presenter.util.ViewState
-import com.example.viacepapp.presenter.theme.ViaCepAppTheme
+import com.example.viacepapp.componentes.AppTitle
+import com.example.viacepapp.componentes.CepButton
+import com.example.viacepapp.componentes.CepTextField
+import com.example.viacepapp.componentes.RunnersList
+import com.example.viacepapp.componentes.WinnerText
+import com.example.viacepapp.util.ViewState
+import com.example.viacepapp.theme.ViaCepAppTheme
 
 class MainActivity : ComponentActivity() {
 
